@@ -8,3 +8,7 @@ https://medium.com/@zw3rk/a-haskell-cross-compiler-for-ios-7cc009abe208
 Also see the toolchain wrapper
 
 https://github.com/zw3rk/toolchain-wrapper
+
+```
+$ git clone --recurse-submodules https://gitlab.haskell.org/ghc/ghc.git
+```
