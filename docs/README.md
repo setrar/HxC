@@ -65,11 +65,13 @@ $ brew install llvm
 - [ ] Add [LVM](http://llvm.org/docs/GettingStarted.html#id34) to your path and reopen a terminal
 
 ```
-### LLVM binaries and libraries ###
+### LLVM binaries and libraries along with LIBFFI###
 export LLVM_HOME="/usr/local/opt/llvm"
-export LDFLAGS="-L${LLVM_HOME}/lib"
-export CPPFLAGS="-I${LLVM_HOME}/include"
 export PATH=$PATH:${LLVM_HOME}/bin
+
+export LIBFFI_HOME="/usr/local/opt/libffi"
+export LDFLAGS="-L${LLVM_HOME}/lib -L${LIBFFI_HOME}/lib"
+export CPPFLAGS="-I${LLVM_HOME}/include -I${LIBFFI_HOME}/include"
 ```
 
 ```
