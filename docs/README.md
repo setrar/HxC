@@ -118,6 +118,11 @@ $  cat $HOME/.ghcup/ghc/${GHC_VERSION}/lib/ghc-${GHC_VERSION}/settings
 $ cabal install happy alex
 ```
 
+- [ ] Set your PREFIX
+
+```
+$ cd ~/Developer/HxC 
+```
 
 ```
 $ git clone --recurse-submodules https://github.com/ghc/ghc.git && cd ghc
@@ -127,7 +132,7 @@ $ git submodule update --init --recursive
 
 ```
 # set paths
-export PREFIX=~/Developer/HxC
+export PREFIX=~/Developer/HxC/ghc
 export PATH=~/Developer/toolchain-wrapper:$PATH
 ```
 
@@ -148,9 +153,8 @@ $ ./boot
 ```
 
 ```
-%   ./configure --target=x86_64-apple-ios \                                     
-              --prefix=$PREFIX \    
-              --disable-large-address-space \
+%   % ./configure --build=x86_64-apple-ios --host=x86_64-apple-ios --target=aarch64-apple-ios \                        
+              --prefix=$PREFIX \
               --with-system-libffi \
               --with-ffi-includes=$LIBFFI_HOME/include \
               --with-ffi-libraries=$LIBFFI_HOME/lib
