@@ -62,17 +62,31 @@ llvm 10.0.0_3
 $ brew install llvm
 ```
 
-- [ ] Add [LVM](http://llvm.org/docs/GettingStarted.html#id34) to your path and reopen a terminal
+- [ ] Check if `libffi` is installed
+
+```
+% brew list --versions libffi
+libffi 3.3
+```
+
+- [ ] otherwise install the latest version
+
+```
+% brew install libffi
+```
+
+- [ ] Add [LVM](http://llvm.org/docs/GettingStarted.html#id34)  and [LIBFFI](https://sourceware.org/libffi/)to your path and reopen a terminal
 
 ```
 ### LLVM binaries and libraries along with LIBFFI###
 export LLVM_HOME="/usr/local/opt/llvm"
 export PATH=$PATH:${LLVM_HOME}/bin
 
-export LIBFFI_HOME="/usr/local/opt/libffi"
 export LDFLAGS="-L${LLVM_HOME}/lib -L${LIBFFI_HOME}/lib"
 export CPPFLAGS="-I${LLVM_HOME}/include -I${LIBFFI_HOME}/include"
 ```
+
+- [ ] Check LLVM
 
 ```
 % clang --version
@@ -97,7 +111,7 @@ $ GHC_VERSION=`ghc --version | awk '{print $8}'`
 ```
 
 ```
-$  vi $HOME/.ghcup/ghc/${GHC_VERSION}/lib/ghc-${GHC_VERSION}/settings
+$  cat $HOME/.ghcup/ghc/${GHC_VERSION}/lib/ghc-${GHC_VERSION}/settings
 ```
 
 ```
