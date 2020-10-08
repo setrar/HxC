@@ -2,14 +2,18 @@
 
 I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-compiler-for-ios-7cc009abe208)
 
+I place most of my code in the `~/Developer` folder
+
 ## Toolchain Wrapping 
 
-run the below script to create the links
+- [ ] clone `toolchain-wrapper` repository and the run the `bootstrap` script to create the `wrapper` links
 
 
 ```
 $ git clone https://github.com/zw3rk/toolchain-wrapper && cd toolchain-wrapper
 ```
+
+Before generating the wrapper links
 
 ```
 $ ls -l 
@@ -23,11 +27,13 @@ $ ls -l
 -rwxr-xr-x  1 valiha  staff  4471 Oct  7 22:13 wrapper
 ```
 
-run the `bootsrap` script that will generate wrappers 
+- [ ] run the `bootsrap` script that will generate wrappers 
 
 ```
 $ ./bootstrap
 ```
+
+After generating the wrapper links
 
 ```
 $ ls -l 
