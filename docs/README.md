@@ -152,6 +152,8 @@ export PATH=~/Developer/toolchain-wrapper:$PATH
 $ ./boot
 ```
 
+https://github.com/zw3rk/ghc-build-scripts
+
 ```
 %   % ./configure --build=x86_64-apple-ios --host=x86_64-apple-ios --target=aarch64-apple-ios \                        
               --prefix=$PREFIX \
