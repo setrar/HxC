@@ -6,6 +6,12 @@ I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-co
 
 run the below script to create the links
 
+
+```
+$ git clone https://github.com/zw3rk/toolchain-wrapper && cd toolchain-wrapper
+```
+
+
 ```
 $ bootstrap
 ```
