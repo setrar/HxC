@@ -1,6 +1,6 @@
 # Update 
 
-I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-compiler-for-ios-7cc009abe208)
+I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-compiler-for-ios-7cc009abe208) more recent [Mobile-Haskell blog](https://codetalk.io/posts/2018-02-07-Mobile-Haskell.html)
 
 I place most of my code in the `~/Developer` folder
 
