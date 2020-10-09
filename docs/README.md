@@ -142,9 +142,15 @@ export PATH=~/Developer/toolchain-wrapper:$PATH
 $ ./boot
 ```
 
+
+
 https://github.com/zw3rk/ghc-build-scripts
 
+              
+- [ ] use [GNU Autoconf](https://www.gnu.org/software/autoconf/) to generate `make scripts`
+
               --build=x86_64-apple-ios --host=x86_64-apple-ios 
+
 
 ```
 % ./configure --prefix=$PREFIX \
