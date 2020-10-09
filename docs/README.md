@@ -144,9 +144,11 @@ $ ./boot
 
 https://github.com/zw3rk/ghc-build-scripts
 
+              --build=x86_64-apple-ios --host=x86_64-apple-ios 
+
 ```
-%   % ./configure --build=x86_64-apple-ios --host=x86_64-apple-ios --target=aarch64-apple-ios \                        
-              --prefix=$PREFIX \
+% ./configure --prefix=$PREFIX \
+              --target=aarch64-apple-ios \      
               --with-system-libffi \
               --with-ffi-includes=$LIBFFI_HOME/include \
               --with-ffi-libraries=$LIBFFI_HOME/lib
