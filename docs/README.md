@@ -127,7 +127,7 @@ $ cd ~/Developer/HxC
 - [ ] [Getting the sources](https://gitlab.haskell.org/ghc/ghc/-/wikis/building/getting-the-sources)
 
 ```
-$ git clone --recurse-submodules https://github.com/ghc/ghc.git && cd ghc
+$ git clone --recurse-submodules https://gitlab.haskell.org/ghc/ghc.git && cd ghc
 $ git checkout ghc-8.6.5-release
 $ git submodule update --init --recursive
 ```
@@ -136,18 +136,6 @@ $ git submodule update --init --recursive
 # set paths
 export PREFIX=~/Developer/HxC/ghc
 export PATH=~/Developer/toolchain-wrapper:$PATH
-```
-
-```
-  git config --global url."git://github.com/ghc/packages-".insteadOf     git://github.com/ghc/packages/
-  git config --global url."http://github.com/ghc/packages-".insteadOf    http://github.com/ghc/packages/
-  git config --global url."https://github.com/ghc/packages-".insteadOf   https://github.com/ghc/packages/
-  git config --global url."ssh://git\@github.com/ghc/packages-".insteadOf ssh://git\@github.com/ghc/packages/
-  git config --global url."git\@github.com:/ghc/packages-".insteadOf      git\@github.com:/ghc/packages/
-```
-
-```
-%  git submodule update --init
 ```
 
 ```
