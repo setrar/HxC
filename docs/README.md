@@ -158,6 +158,10 @@ https://github.com/zw3rk/ghc-build-scripts
               --with-system-libffi \
               --with-ffi-includes=$LIBFFI_HOME/include \
               --with-ffi-libraries=$LIBFFI_HOME/lib
+% ./configure \
+   --with-system-libffi \
+   --with-ffi-includes=$LIBFFI_HOME/include \
+   --with-ffi-libraries=$LIBFFI_HOME/lib
 ```
 
   --  Create a mk/build.mk and set the BuildFlavour to quick-cross
