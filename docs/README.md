@@ -158,7 +158,7 @@ https://github.com/zw3rk/ghc-build-scripts
               
 - [ ] use [GNU Autoconf](https://www.gnu.org/software/autoconf/) to generate `make scripts`
 
-To check all optional FEATURES, PACKAGES and configuration tuning, type:
+To check all optional FEATURES, PACKAGES, TUNING and SYSTEM TYPES (build, host, target), type:
 
 ```
 % ./configure --help
