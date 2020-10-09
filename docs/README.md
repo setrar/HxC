@@ -176,7 +176,7 @@ $  sed -E "s/^#(BuildFlavour[ ]+= quick-cross)$/\1/" mk/build.mk.sample > mk/bui
 ```
 
 ```
-$ make -j
+$ make -j && make install
 ```
 
 
