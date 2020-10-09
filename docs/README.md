@@ -158,6 +158,12 @@ https://github.com/zw3rk/ghc-build-scripts
               
 - [ ] use [GNU Autoconf](https://www.gnu.org/software/autoconf/) to generate `make scripts`
 
+To check all the OPTIONS and configuration tuning, type:
+
+```
+% ./configure --help
+```
+
               --build=x86_64-apple-ios --host=x86_64-apple-ios 
 
 :x: The GNU Autoconf is critical and generally fails when given wrong information
