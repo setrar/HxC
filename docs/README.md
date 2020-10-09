@@ -124,6 +124,8 @@ $ cabal install happy alex
 $ cd ~/Developer/HxC 
 ```
 
+- [ ] [Getting the sources](https://gitlab.haskell.org/ghc/ghc/-/wikis/building/getting-the-sources)
+
 ```
 $ git clone --recurse-submodules https://github.com/ghc/ghc.git && cd ghc
 $ git checkout ghc-8.6.5-release
