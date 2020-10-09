@@ -138,6 +138,15 @@ export PREFIX=~/Developer/HxC/ghc
 export PATH=~/Developer/toolchain-wrapper:$PATH
 ```
 
+
+- [ ] Clean up the build tree
+ 
+``` 
+$ git clean -x -f -d
+```
+
+- [ ] Reboot all ??
+
 ```
 $ ./boot
 ```
