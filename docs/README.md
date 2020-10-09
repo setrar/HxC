@@ -164,7 +164,9 @@ To check all optional FEATURES, PACKAGES, TUNING and SYSTEM TYPES (build, host, 
 % ./configure --help
 ```
 
-              --build=x86_64-apple-ios --host=x86_64-apple-ios 
+    --build=x86_64-apple-ios \
+    --host=x86_64-apple-ios \ 
+    --target=aarch64-apple-ios
 
 :x: The GNU Autoconf is critical and generally fails when given wrong information
 
