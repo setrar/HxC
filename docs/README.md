@@ -151,16 +151,14 @@ https://github.com/zw3rk/ghc-build-scripts
 
               --build=x86_64-apple-ios --host=x86_64-apple-ios 
 
+:x: The GNU Autoconf is critical and generally fails when given wrong information
 
 ```
-% ./configure --prefix=$PREFIX \
-              --target=aarch64-apple-ios \      
-              --with-system-libffi \
-              --with-ffi-includes=$LIBFFI_HOME/include \
-              --with-ffi-libraries=$LIBFFI_HOME/lib
 % ./configure \
-   --prefix=$PREFIX \
-   --with-system-libffi --with-ffi-includes=$LIBFFI_HOME/include --with-ffi-libraries=$LIBFFI_HOME/lib
+    --prefix=$PREFIX \
+    --with-system-libffi --with-ffi-includes=$LIBFFI_HOME/include --with-ffi-libraries=$LIBFFI_HOME/lib \
+    --disable-large-address-space \
+    --target=aarch64-apple-ios
 ```
 
   --  Create a mk/build.mk and set the BuildFlavour to quick-cross
