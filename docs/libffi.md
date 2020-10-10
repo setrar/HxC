@@ -33,10 +33,11 @@ $ SDK="iphoneos" CHOST="aarch64-apple-ios" \
 - [ ] Working
 
 ```
-$  CC="aarch64-apple-ios-clang" CXX="aarch64-apple-ios-clang" \
+$  CHOST="aarch64-apple-ios" \
+   CC="aarch64-apple-ios-clang" CXX="aarch64-apple-ios-clang" \
    ./configure \
-     --prefix=$LIBFFI_HOME/aarch64-apple-ios \
-     --host=aarch64-apple-ios \
+     --prefix=$LIBFFI_HOME/${CHOST} \
+     --host=${CHOST} \
      --enable-static=yes --enable-shared=yes
 ```
 
@@ -52,10 +53,22 @@ $ git clean -f -x -d
 $ ./autogen.sh
 ```
 
-  CC="x86_64-apple-ios-clang" CXX="x86_64-apple-ios-clang" \
+- [x] Working
 
 ```
-$ ./configure \
+$ SDK="iphoneos" CHOST="x86_64-apple-ios" \
+  CC=$(xcrun --find --sdk "${SDK}" gcc) CXX=$(xcrun --find --sdk "${SDK}" g++) \
+  ./configure \
+     --prefix=$LIBFFI_HOME/${CHOST} \
+     --host=${CHOST} \
+     --enable-static=yes --enable-shared=yes
+```
+
+- [x] Working  
+
+```
+$ CC="x86_64-apple-ios-clang" CXX="x86_64-apple-ios-clang" \
+  ./configure \
      --prefix=$LIBFFI_HOME/x86_64-apple-ios \
      --host=x86_64-apple-ios \
      --enable-static=yes --enable-shared=yes
