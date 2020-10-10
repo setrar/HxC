@@ -53,3 +53,6 @@ $ ./configure \
 $ make -j && make install
 ```
 
+# References
+
+https://stackoverflow.com/questions/26812060/cross-compile-to-static-lib-libgcrypt-for-use-on-ios/26812514#26812514
