@@ -56,11 +56,10 @@ $ ./autogen.sh
 - [x] Working
 
 ```
-$ SDK="iphoneos" CHOST="x86_64-apple-ios" \
-  CC=$(xcrun --find --sdk "${SDK}" gcc) CXX=$(xcrun --find --sdk "${SDK}" g++) \
+$ CC=$(xcrun --find --sdk "iphoneos" gcc) CXX=$(xcrun --find --sdk "iphoneos" g++) \
   ./configure \
-     --prefix=${LIBFFI_HOME}/${CHOST} \
-     --host=${CHOST} \
+     --prefix=${LIBFFI_HOME}/x86_64-apple-ios \
+     --host=x86_64-apple-ios \
      --enable-static=yes --enable-shared=yes
 ```
 
