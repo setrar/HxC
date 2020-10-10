@@ -24,7 +24,7 @@ $ LIBFFI_HOME=${HOME}/Developer/HxC/libffi
 $ SDK="iphoneos" ARCH_FLAGS="-arch armv7 -arch armv7s -arch arm64" \
   HOST_FLAGS="${ARCH_FLAGS} -miphoneos-version-min=8.0 -isysroot $(xcrun --sdk ${SDK} --show-sdk-path)" \
   CHOST="arm-apple-darwin" \
-  CC=$(xcrun --find --sdk "${SDK}" gcc) CXX="aarch64-apple-ios-clang" \
+  CC=$(xcrun --find --sdk "${SDK}" gcc) CXX=$(xcrun --find --sdk "${SDK}" g++) \
   ./configure \
      --prefix=$LIBFFI_HOME/${CHOST} \
      --host=${CHOST} \
