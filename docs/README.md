@@ -94,11 +94,12 @@ InstalledDir: /usr/local/opt/llvm/bin
 
 `libffi` is usually installed since it is used by cairo, csound, faust, ffmpeg and more
 
+:warning: This version is generally deployed for `X86_64` Architecture
+
 ```
 % brew list --versions libffi
 libffi 3.3
 ```
-
 
 - [ ] Capture `ghc` version
 
