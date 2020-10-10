@@ -15,7 +15,7 @@ $ ./autogen.sh
 ```
 
 ```
-$ LIBFFI_SRC=/User/valiha/Developer/HxC/libffi
+$ LIBFFI_SRC=${HOME}/Developer/HxC/libffi
 ```
 
 ```
