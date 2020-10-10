@@ -22,7 +22,7 @@ $ LIBFFI_HOME=${HOME}/Developer/HxC/libffi
 
 ```
 $ SDK="iphoneos" \
-  CHOST="arm-apple-darwin" \
+  CHOST="aarch64-apple-ios" \
   CC=$(xcrun --find --sdk "${SDK}" gcc) CXX=$(xcrun --find --sdk "${SDK}" g++) \
   ./configure \
      --prefix=$LIBFFI_HOME/${CHOST} \
