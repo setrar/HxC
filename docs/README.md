@@ -171,8 +171,11 @@ To check all optional FEATURES, PACKAGES, TUNING and SYSTEM TYPES (build, host, 
 :x: The GNU Autoconf is critical and generally fails when given wrong information
 
 ```
-%   TARGET=aarch64-apple-ios \
-    ./configure \
+$ export TARGET=aarch64-apple-ios
+```
+
+```
+%   ./configure \
     --prefix=$PREFIX \
     --with-system-libffi --with-ffi-includes=$LIBFFI_HOME/${TARGET}/include --with-ffi-libraries=$LIBFFI_HOME/${TARGET}/lib \
     --disable-large-address-space \
