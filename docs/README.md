@@ -75,16 +75,6 @@ libffi 3.3
 % brew install libffi
 ```
 
-- [ ] Add [LVM](http://llvm.org/docs/GettingStarted.html#id34)  and [LIBFFI](https://sourceware.org/libffi/)to your path and reopen a terminal
-
-```
-### LLVM binaries and libraries along with LIBFFI###
-export LLVM_HOME="/usr/local/opt/llvm"
-export PATH=$PATH:${LLVM_HOME}/bin
-
-export LDFLAGS="-L${LLVM_HOME}/lib -L${LIBFFI_HOME}/lib"
-export CPPFLAGS="-I${LLVM_HOME}/include -I${LIBFFI_HOME}/include"
-```
 
 - [ ] Check LLVM
 
@@ -174,6 +164,18 @@ To check all optional FEATURES, PACKAGES, TUNING and SYSTEM TYPES (build, host, 
 $ export TARGET=aarch64-apple-ios
 ```
 
+- [ ] Add [LVM](http://llvm.org/docs/GettingStarted.html#id34)  and [LIBFFI](https://sourceware.org/libffi/)to your path and reopen a terminal
+
+```
+### LLVM binaries and libraries along with LIBFFI###
+export LLVM_HOME="/usr/local/opt/llvm"
+export PATH=$PATH:${LLVM_HOME}/bin
+
+export LDFLAGS="-L${LLVM_HOME}/lib -L${LIBFFI_HOME}/${TARGET}/lib"
+export CPPFLAGS="-I${LLVM_HOME}/include -I${LIBFFI_HOME}/${TARGET}/include"
+```
+
+
 ```
 %   ./configure \
     --prefix=$PREFIX \
@@ -188,7 +190,7 @@ $  sed -E "s/^#(BuildFlavour[ ]+= quick-cross)$/\1/" mk/build.mk.sample > mk/bui
 ```
 
 ```
-$ make -j && make install
+$ make -j16 && make install
 ```
 
 
