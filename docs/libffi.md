@@ -33,7 +33,7 @@ $ CC=$(xcrun --find --sdk "iphoneos" gcc) CXX=$(xcrun --find --sdk "iphoneos" g+
 ```
 
 
-- [ ] Working
+- [ ] attempt
 
 ```
 $  CC="$(aarch64-apple-ios-clang)" CXX="$(aarch64-apple-ios-cland)" \
@@ -65,7 +65,7 @@ $ CC=$(xcrun --find --sdk "iphonesimulator" gcc) CXX=$(xcrun --find --sdk "iphon
      --enable-static=yes --enable-shared=yes
 ```
 
-- [x] Working  
+- [x] attempt  
 
 ```
 $ CC="$(x86_64-apple-ios-clang)" CXX="$(x86_64-apple-ios-clang)" \
