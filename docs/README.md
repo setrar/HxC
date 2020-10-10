@@ -4,7 +4,7 @@ I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-co
 
 I place most of my code in the `~/Developer` folder
 
-## Toolchain Wrapping 
+## :a: Toolchain Wrapping 
 
 - [ ] clone `toolchain-wrapper` repository and the run the `bootstrap` script to create the `wrapper` links
 
@@ -47,9 +47,9 @@ lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 x86_64-linux-android-ranlib -> wr
 ```
 
 
-## Prerequisites
+## :b: Prerequisites
 
-- [ ] Check if `llvm` is installed
+- [x] Check if `llvm` is installed
 
 ```
 % brew list --versions llvm
@@ -62,21 +62,7 @@ llvm 10.0.0_3
 $ brew install llvm
 ```
 
-- [ ] Check if `libffi` is installed
-
-```
-% brew list --versions libffi
-libffi 3.3
-```
-
-- [ ] otherwise install the latest version
-
-```
-% brew install libffi
-```
-
-
-- [ ] Check LLVM
+- [x] Check LLVM
 
 ```
 % clang --version
@@ -87,12 +73,32 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 ```
 
 ```
+$ brew info llvm
+```
+
+will give the LLVM's location which is generally
+
+```
+$ export LLVM_HOME=/usr/local/opt/llvm
+```
+
+```
 % $LLVM_HOME/bin/clang --version       
 clang version 10.0.0 
 Target: x86_64-apple-darwin19.6.0
 Thread model: posix
 InstalledDir: /usr/local/opt/llvm/bin
 ```
+
+- [ ] Check if `libffi` is installed
+
+`libffi` is usually installed since it is used by cairo, csound, faust, ffmpeg and more
+
+```
+% brew list --versions libffi
+libffi 3.3
+```
+
 
 - [ ] Capture `ghc` version
 
