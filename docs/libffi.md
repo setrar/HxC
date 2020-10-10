@@ -15,12 +15,12 @@ $ ./autogen.sh
 ```
 
 ```
-$ LIBFFI_SRC=${HOME}/Developer/HxC/libffi
+$ LIBFFI_HOME=${HOME}/Developer/HxC/libffi
 ```
 
 ```
 $ ./configure \
-     --prefix=$LIBFFI_SRC/aarch64-apple-ios \
+     --prefix=$LIBFFI_HOME/aarch64-apple-ios \
      --host=aarch64-apple-ios \
      --enable-static=yes --enable-shared=yes
 ```
@@ -46,7 +46,7 @@ $ ./autogen.sh
 
 ```
 $ ./configure \
-     --prefix=$LIBFFI_SRC/x86_64-apple-ios \
+     --prefix=$LIBFFI_HOME/x86_64-apple-ios \
      --host=x86_64-apple-ios \
      --enable-static=yes --enable-shared=yes
 ```
