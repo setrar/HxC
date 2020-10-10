@@ -178,6 +178,7 @@ $ export TARGET=aarch64-apple-ios
 export LLVM_HOME="/usr/local/opt/llvm"
 export PATH=${LLVM_HOME}/bin:$PATH:
 
+export LBFFI_HOME=/Users/valiha/Developer/HxC/libffi
 export LDFLAGS="-L${LLVM_HOME}/lib -L${LIBFFI_HOME}/${TARGET}/lib"
 export CPPFLAGS="-I${LLVM_HOME}/include -I${LIBFFI_HOME}/${TARGET}/include"
 ```
