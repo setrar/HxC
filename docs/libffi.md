@@ -59,7 +59,7 @@ $ ./autogen.sh
 - [x] Working
 
 ```
-$ CC=$(xcrun --find --sdk "iphonesimulator" g++) CXX=$(xcrun --find --sdk "iphonesimulator" g++) \
+$ CC=$(xcrun --find --sdk "iphonesimulator" gccc) CXX=$(xcrun --find --sdk "iphonesimulator" g++) \
   ./configure \
      --prefix=${LIBFFI_HOME}/x86_64-apple-ios \
      --host=x86_64-apple-ios \
