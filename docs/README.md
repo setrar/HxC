@@ -134,7 +134,7 @@ $ git submodule update --init --recursive
 
 ```
 # set paths
-export PREFIX=~/Developer/HxC/ghc
+export PREFIX=${HOME}/Developer/HxC/build
 export PATH=~/Developer/toolchain-wrapper:$PATH
 ```
 
