@@ -36,11 +36,10 @@ $ CC=$(xcrun --find --sdk "iphoneos" gcc) CXX=$(xcrun --find --sdk "iphoneos" g+
 - [ ] Working
 
 ```
-$  CHOST="aarch64-apple-ios" \
-   CC="aarch64-apple-ios-clang" CXX="aarch64-apple-ios-clang" \
+$  CC="$(aarch64-apple-ios-clang)" CXX="$(aarch64-apple-ios-cland)" \
    ./configure \
-     --prefix=$LIBFFI_HOME/${CHOST} \
-     --host=${CHOST} \
+     --prefix=$LIBFFI_HOME/aarch64-apple-ios \
+     --host=aarch64-apple-ios \
      --enable-static=yes --enable-shared=yes
 ```
 
@@ -59,7 +58,7 @@ $ ./autogen.sh
 - [x] Working
 
 ```
-$ CC=$(xcrun --find --sdk "iphonesimulator" gccc) CXX=$(xcrun --find --sdk "iphonesimulator" g++) \
+$ CC=$(xcrun --find --sdk "iphonesimulator" gcc) CXX=$(xcrun --find --sdk "iphonesimulator" g++) \
   ./configure \
      --prefix=${LIBFFI_HOME}/x86_64-apple-ios \
      --host=x86_64-apple-ios \
@@ -69,7 +68,7 @@ $ CC=$(xcrun --find --sdk "iphonesimulator" gccc) CXX=$(xcrun --find --sdk "ipho
 - [x] Working  
 
 ```
-$ CC="x86_64-apple-ios-clang" CXX="x86_64-apple-ios-clang" \
+$ CC="$(x86_64-apple-ios-clang)" CXX="$(x86_64-apple-ios-clang)" \
   ./configure \
      --prefix=$LIBFFI_HOME/x86_64-apple-ios \
      --host=x86_64-apple-ios \
