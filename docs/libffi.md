@@ -44,7 +44,7 @@ $ ./autogen.sh
 $ CC="x86_64-apple-ios-clang" \
   CXX="x86_64-apple-ios-clang" \
   ./configure \
-     --prefix=/path/to/libffi/x86_64-apple-ios \
+     --prefix=$LIBFFI_SRC/x86_64-apple-ios \
      --host=x86_64-apple-ios \
      --enable-static=yes --enable-shared=yes
 ```
