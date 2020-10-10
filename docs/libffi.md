@@ -25,8 +25,7 @@ $ ./configure \
      --enable-static=yes --enable-shared=yes
 ```
 
-  CC="aarch64-apple-ios-clang" \
-  CXX="aarch64-apple-ios-clang" \
+  CC="aarch64-apple-ios-clang" CXX="aarch64-apple-ios-clang" \
 
 ```
 $ make -j && make install
@@ -41,8 +40,7 @@ $ git clean -f -x -d
 $ ./autogen.sh
 ```
 
-  CC="x86_64-apple-ios-clang" \
-  CXX="x86_64-apple-ios-clang" \
+  CC="x86_64-apple-ios-clang" CXX="x86_64-apple-ios-clang" \
 
 ```
 $ ./configure \
