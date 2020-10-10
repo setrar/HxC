@@ -5,6 +5,12 @@
 $ cd ~/Developer
 ```
 
+Set destination folder upfront
+
+```
+$ LIBFFI_HOME=${HOME}/Developer/HxC/libffi
+```
+
 
 ```
 $ git clone https://github.com/libffi/libffi.git && cd libffi
@@ -14,9 +20,7 @@ $ git clone https://github.com/libffi/libffi.git && cd libffi
 $ ./autogen.sh
 ```
 
-```
-$ LIBFFI_HOME=${HOME}/Developer/HxC/libffi
-```
+
 
 - [x] Working
 
