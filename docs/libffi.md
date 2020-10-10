@@ -29,7 +29,7 @@ $ ./configure \
   CXX="aarch64-apple-ios-clang" \
 
 ```
-$ make && make install
+$ make -j && make install
 ```
 
 
@@ -52,6 +52,6 @@ $ ./configure \
 ```
 
 ```
-$ make && make install
+$ make -j && make install
 ```
 
