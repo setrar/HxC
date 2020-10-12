@@ -1,8 +1,17 @@
-# Update 
+# Tooling 
 
 I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-compiler-for-ios-7cc009abe208) more recent [Mobile-Haskell blog](https://codetalk.io/posts/2018-02-07-Mobile-Haskell.html)
 
 I place most of my code in the `~/Developer` folder
+
+
+:o: Set `path` to use the tool chain wrapper
+
+```
+# set paths
+export PATH=~/Developer/toolchain-wrapper:$PATH
+```
+
 
 ## :a: Toolchain Wrapping 
 
@@ -46,10 +55,3 @@ lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 x86_64-linux-android-nm -> wrappe
 lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 x86_64-linux-android-ranlib -> wrapper
 ```
 
-:b: Set `path`
-
-```
-# set paths
-export PREFIX=${HOME}/Developer/HxC/build
-export PATH=~/Developer/toolchain-wrapper:$PATH
-```
