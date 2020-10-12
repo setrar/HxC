@@ -46,3 +46,10 @@ lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 x86_64-linux-android-nm -> wrappe
 lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 x86_64-linux-android-ranlib -> wrapper
 ```
 
+:b: Set `path`
+
+```
+# set paths
+export PREFIX=${HOME}/Developer/HxC/build
+export PATH=~/Developer/toolchain-wrapper:$PATH
+```
