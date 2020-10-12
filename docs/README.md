@@ -6,7 +6,7 @@ I place most of my code in the `~/Developer` folder
 
 ## :a: Toolchain Wrapping 
 
-- [ ] clone [`toolchain-wrapper`](toolchain-wrapper.md) repository and the run the `bootstrap` script to create the `wrapper` links
+- [ ] clone [`toolchain-wrapper`](toolchain-wrapping.md) repository and the run the `bootstrap` script to create the `wrapper` links
 
 
 ## :b: Prerequisites
