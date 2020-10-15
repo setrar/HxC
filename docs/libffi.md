@@ -36,7 +36,7 @@ $ CC=$(xcrun --find --sdk "iphoneos" gcc) CXX=$(xcrun --find --sdk "iphoneos" g+
 - [ ] attempt
 
 ```
-$  CC="$(aarch64-apple-ios-clang)" CXX="$(aarch64-apple-ios-cland)" \
+$  CC="$(aarch64-apple-ios-clang)" CXX="$(aarch64-apple-ios-clang)" \
    ./configure \
      --prefix=$LIBFFI_HOME/aarch64-apple-ios \
      --host=aarch64-apple-ios \
