@@ -1,55 +1,17 @@
 # Update 
 
-I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-compiler-for-ios-7cc009abe208)
+I mostly followed the [medium blog](https://medium.com/@zw3rk/a-haskell-cross-compiler-for-ios-7cc009abe208) more recent [Mobile-Haskell blog](https://codetalk.io/posts/2018-02-07-Mobile-Haskell.html)
 
 I place most of my code in the `~/Developer` folder
 
-## Toolchain Wrapping 
+## :a: Toolchain Wrapping 
 
-- [ ] clone `toolchain-wrapper` repository and the run the `bootstrap` script to create the `wrapper` links
-
-
-```
-$ git clone https://github.com/zw3rk/toolchain-wrapper && cd toolchain-wrapper
-```
-
-Before generating the wrapper links
-
-```
-$ ls -l 
--rw-r--r--  1 valiha  staff   533 Oct  7 22:13 README.md
--rw-r--r--  1 valiha  staff  2466 Oct  7 22:13 android-toolchain.config
--rwxr-xr-x  1 valiha  staff   529 Oct  7 22:13 bootstrap
--rwxr-xr-x  1 valiha  staff  1532 Oct  7 22:13 libtool-lite
--rw-r--r--  1 valiha  staff   121 Oct  7 22:13 linux-android-toolchain.config
--rw-r--r--  1 valiha  staff   289 Oct  7 22:13 raspberrypi-toolchain.config
--rw-r--r--  1 valiha  staff   113 Oct  7 22:13 wasm-toolchain.config
--rwxr-xr-x  1 valiha  staff  4471 Oct  7 22:13 wrapper
-```
-
-- [ ] run the `bootsrap` script that will generate wrappers 
-
-```
-$ ./bootstrap
-```
-
-After generating the wrapper links
-
-```
-$ ls -l 
-total 72
--rw-r--r--  1 valiha  staff   533 Oct  7 22:13 README.md
-lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 aarch64-apple-darwin-ar -> wrapper
-lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 aarch64-apple-darwin-cabal -> wrapper
-....
-lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 x86_64-linux-android-nm -> wrapper
-lrwxr-xr-x  1 valiha  staff     7 Oct  7 22:14 x86_64-linux-android-ranlib -> wrapper
-```
+- [ ] clone [`toolchain-wrapper`](toolchain-wrapping.md) repository and the run the `bootstrap` script to create the `wrapper` links
 
 
-## Prerequisites
+## :b: Prerequisites
 
-- [ ] Check if `llvm` is installed
+- [x] Check if `llvm` is installed
 
 ```
 % brew list --versions llvm
@@ -62,31 +24,7 @@ llvm 10.0.0_3
 $ brew install llvm
 ```
 
-- [ ] Check if `libffi` is installed
-
-```
-% brew list --versions libffi
-libffi 3.3
-```
-
-- [ ] otherwise install the latest version
-
-```
-% brew install libffi
-```
-
-- [ ] Add [LVM](http://llvm.org/docs/GettingStarted.html#id34)  and [LIBFFI](https://sourceware.org/libffi/)to your path and reopen a terminal
-
-```
-### LLVM binaries and libraries along with LIBFFI###
-export LLVM_HOME="/usr/local/opt/llvm"
-export PATH=$PATH:${LLVM_HOME}/bin
-
-export LDFLAGS="-L${LLVM_HOME}/lib -L${LIBFFI_HOME}/lib"
-export CPPFLAGS="-I${LLVM_HOME}/include -I${LIBFFI_HOME}/include"
-```
-
-- [ ] Check LLVM
+- [x] Check LLVM
 
 ```
 % clang --version
@@ -97,11 +35,32 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 ```
 
 ```
+$ brew info llvm
+```
+
+will give the LLVM's location which is generally
+
+```
+$ export LLVM_HOME=/usr/local/opt/llvm
+```
+
+```
 % $LLVM_HOME/bin/clang --version       
 clang version 10.0.0 
 Target: x86_64-apple-darwin19.6.0
 Thread model: posix
 InstalledDir: /usr/local/opt/llvm/bin
+```
+
+- [ ] Check if `libffi` is installed
+
+`libffi` is usually installed since it is used by cairo, csound, faust, ffmpeg and more
+
+:warning: This version is generally deployed for `X86_64` Architecture
+
+```
+% brew list --versions libffi
+libffi 3.3
 ```
 
 - [ ] Capture `ghc` version
@@ -124,42 +83,74 @@ $ cabal install happy alex
 $ cd ~/Developer/HxC 
 ```
 
+- [ ] [Getting the sources](https://gitlab.haskell.org/ghc/ghc/-/wikis/building/getting-the-sources)
+
 ```
-$ git clone --recurse-submodules https://github.com/ghc/ghc.git && cd ghc
+$ git clone --recurse-submodules https://gitlab.haskell.org/ghc/ghc.git && cd ghc
 $ git checkout ghc-8.6.5-release
 $ git submodule update --init --recursive
 ```
 
 ```
 # set paths
-export PREFIX=~/Developer/HxC/ghc
-export PATH=~/Developer/toolchain-wrapper:$PATH
+export PREFIX=${HOME}/Developer/HxC/build
 ```
 
-```
-  git config --global url."git://github.com/ghc/packages-".insteadOf     git://github.com/ghc/packages/
-  git config --global url."http://github.com/ghc/packages-".insteadOf    http://github.com/ghc/packages/
-  git config --global url."https://github.com/ghc/packages-".insteadOf   https://github.com/ghc/packages/
-  git config --global url."ssh://git\@github.com/ghc/packages-".insteadOf ssh://git\@github.com/ghc/packages/
-  git config --global url."git\@github.com:/ghc/packages-".insteadOf      git\@github.com:/ghc/packages/
+
+- [ ] Clean up the build tree
+ 
+``` 
+$ git clean -x -f -d
 ```
 
-```
-%  git submodule update --init
-```
+- [ ] Reboot all ??
 
 ```
 $ ./boot
 ```
 
+
+
 https://github.com/zw3rk/ghc-build-scripts
 
+              
+- [ ] use [GNU Autoconf](https://www.gnu.org/software/autoconf/) to generate `make scripts`
+
+To check all optional FEATURES, PACKAGES, TUNING and SYSTEM TYPES (build, host, target), type:
+
 ```
-%   % ./configure --build=x86_64-apple-ios --host=x86_64-apple-ios --target=aarch64-apple-ios \                        
-              --prefix=$PREFIX \
-              --with-system-libffi \
-              --with-ffi-includes=$LIBFFI_HOME/include \
-              --with-ffi-libraries=$LIBFFI_HOME/lib
+% ./configure --help
+```
+
+    --build=x86_64-apple-ios \
+    --host=x86_64-apple-ios \ 
+    --target=aarch64-apple-ios
+
+:x: The GNU Autoconf is critical and generally fails when given wrong information
+
+```
+$ export TARGET=aarch64-apple-ios
+```
+
+- [ ] Add [LVM](http://llvm.org/docs/GettingStarted.html#id34)  and [LIBFFI](https://sourceware.org/libffi/)to your path and reopen a terminal
+
+```
+### LLVM binaries and libraries along with LIBFFI###
+export LLVM_HOME="/usr/local/opt/llvm"
+export PATH=${LLVM_HOME}/bin:$PATH:
+
+export LBFFI_HOME=/Users/valiha/Developer/HxC/libffi
+export LDFLAGS="-L${LLVM_HOME}/lib -L${LIBFFI_HOME}/${TARGET}/lib"
+export CPPFLAGS="-I${LLVM_HOME}/include -I${LIBFFI_HOME}/${TARGET}/include"
+```
+
+
+```
+%   ./configure \
+    --prefix=$PREFIX \
+    --with-system-libffi --with-ffi-includes=$LIBFFI_HOME/${TARGET}/include --with-ffi-libraries=$LIBFFI_HOME/${TARGET}/lib \
+    --disable-large-address-space \
+    --target=${TARGET}
 ```
 
   --  Create a mk/build.mk and set the BuildFlavour to quick-cross
@@ -168,7 +159,7 @@ $  sed -E "s/^#(BuildFlavour[ ]+= quick-cross)$/\1/" mk/build.mk.sample > mk/bui
 ```
 
 ```
-$ make -j
+$ make -j16 && make install
 ```
 
 
