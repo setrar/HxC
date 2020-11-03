@@ -13,7 +13,7 @@ https://github.com/zw3rk/toolchain-wrapper
 $ git clone --recurse-submodules https://gitlab.haskell.org/ghc/ghc.git
 ```
 
-## Cross Compiling Euterpea
+## Cross Compiling Euterpea Links
 
 
 https://gitlab.haskell.org/ghc/ghc/-/wikis/building/cross-compiling
