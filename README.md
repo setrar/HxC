@@ -36,12 +36,16 @@ https://github.com/ivanperez-keera/haskanoid
 ```
 
 ```
+$ brew install sdl_image sdl_mixer sdl_ttf
+```
+
+```
 cabal install \
-       --extra-include-dirs=/usr/local/Homebrew/Cellar/sdl/1.2.15/include \
-       --extra-include-dirs=~/bin/homebrew/Cellar/sdl_image/1.2.12_7/include/SDL \
+       --extra-include-dirs=/usr/local/Cellar/sdl/1.2.15_2/include \
+       --extra-include-dirs=/usr/local/Cellar/sdl_image/1.2.12_7/include/SDL \
        --extra-include-dirs=~/homebrew/Cellar/sdl_mixer/1.2.12_3/include/SDL \
-       --extra-include-dirs=~/homebrew/Cellar/sdl_ttf/2.0.11_1/include \ 
-       --extra-lib-dirs=/Users/niki/bin/homebrew/Cellar/sdl_image/1.2.12_7/lib \
+       --extra-include-dirs=~/homebrew/Cellar/sdl_ttf/2.0.11_1/include \
+       --extra-lib-dirs=/usr/local/Cellar/sdl_image/1.2.12_7/lib/ \
        --ghc-options=-optP-D_SDL_main_h SDL-image-0.6.1.2
 ```
 
