@@ -32,7 +32,7 @@ https://github.com/setrar/toolchain-wrapper
 https://github.com/ivanperez-keera/haskanoid
 
 ```
-       -f-kinect 
+$ cabal install --flags="-kinect -wiimote"
 ```
 
 ```
