@@ -13,11 +13,21 @@ The GHCup Haskell installer, version v0.1.9
 
 - [ ] Changing version
 
+use:
+
 ```
-% ghcup list
+% ghcup tui
 ```
-✔✔ ghc   8.6.5       base-4.12.0.0  
+
+## :two: [xcode-select](https://stackoverflow.com/questions/9600615/xcode-stops-working-after-set-xcode-select-switch) switch
+
 ```
-✔✔ cabal 2.4.1.0   
-...
+% xcode-select --print-path
+/Applications/Xcode.app/Contents/Developer
+```
+
+Switch to another version
+
+```
+% sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 ```
