@@ -36,7 +36,7 @@ $ cabal install --flags="-kinect -wiimote"
 ```
 
 ```
-$ brew install sdl_image sdl_mixer sdl_ttf
+$ brew install sdl sdl_image sdl_mixer sdl_ttf
 ```
 
 ```
